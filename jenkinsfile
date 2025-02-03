@@ -4,6 +4,8 @@ pipeline {
     triggers {
         // Vérifie les changements dans le dépôt Git toutes les minutes
         pollSCM('* * * * *')
+        githubPush()
+
     }
 
     stages {
