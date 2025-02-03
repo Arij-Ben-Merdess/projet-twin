@@ -20,4 +20,5 @@ public interface BlocService {
 
     public Bloc affecterChambresABloc(List<Long> numChabmbre, Long idBloc);
 
+
 }

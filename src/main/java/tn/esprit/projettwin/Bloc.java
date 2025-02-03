@@ -40,7 +40,7 @@ public class Bloc {
     @ManyToOne
     private Foyer foyer;
 
-    @OneToMany(cascade =  CascadeType.ALL, mappedBy = "bloc")
+    @OneToMany(cascade =  CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "bloc")
     private Set<Chambre> chambres;
 
  

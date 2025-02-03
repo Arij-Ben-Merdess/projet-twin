@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @OpenAPIDefinition(
@@ -14,6 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
                 description = "Documentation de l'API Swagger "
                 ,contact = @Contact(name = "Arij Ben Merdes", url="www.google.com" , email = "arij.benmerdes@gmail.com")
         ))
+@EnableScheduling
 public class ProjetTwinApplication {
 
     public static void main(String[] args) {

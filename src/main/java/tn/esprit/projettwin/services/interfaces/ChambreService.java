@@ -20,5 +20,7 @@ public interface ChambreService{
     List<Chambre> getChambresParBlocEtType(long idBloc, TypeChambre typeC);
     public List<Chambre> getChambresParNomUniversite( String nomUniversite);
     public List<Chambre> getChambresNonReserveesParNomUniversiteEtTypeChambre(String nomUniversite, TypeChambre typeChambre);
+    public void getChambresParBloc();
+    public void pourcentageChambreParType();
 
     }
