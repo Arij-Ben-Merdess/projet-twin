@@ -1,1 +1,23 @@
+pipeline {
+    agent any
 
+    triggers {
+        // Déclenche le build automatiquement lors d'un push dans le référentiel Git
+        githubPush()
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Cloner le dépôt Git
+                git url: 'https://github.com/Arij-Ben-Merdess/projet-twin.git', branch: 'main'
+            }
+        }
+        stage('Display Date') {
+            steps {
+                // Afficher la date système
+                sh 'date'
+            }
+        }
+    }
+}
