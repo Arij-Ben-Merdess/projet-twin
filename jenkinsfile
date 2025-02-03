@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     triggers {
-        // Déclenche le build automatiquement lors d'un push dans le référentiel Git
-        githubPush()
+        // Vérifie les changements dans le dépôt Git toutes les minutes
+        pollSCM('* * * * *')
     }
 
     stages {
